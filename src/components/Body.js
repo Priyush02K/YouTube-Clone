@@ -1,6 +1,10 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import MainCounter from './MainCounter'
+import { Outlet } from 'react-router-dom'
+
+
+
 
 const Body = () => {
   return (
@@ -8,10 +12,11 @@ const Body = () => {
       
 
       <Sidebar/>
-      <MainCounter/>
+      {/* <MainCounter/> */}
+      <Outlet/>
 
     </div>
   )
 }
 
-export default Body
+export default Body;

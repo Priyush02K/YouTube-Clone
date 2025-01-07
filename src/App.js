@@ -3,6 +3,31 @@ import Head from './components/Head';
 import Body from './components/Body';
 import { Provider } from 'react-redux';
 import  store  from './utils/store';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import MainCounter from './components/MainCounter';
+import WatchPage from './components/WatchPage';
+
+
+const appRouter =createBrowserRouter ([{
+  path:"/",
+  element:<Body/>,
+
+  children:[
+    {
+      path:"/",
+      element:<MainCounter/>
+    },
+
+    {
+      path:"watch",
+      element:<WatchPage/>
+    },
+
+
+
+
+  ]
+}])
 
 
 
@@ -21,7 +46,8 @@ function App() {
                           
                           */}
         <Head/>
-        <Body/>
+        <RouterProvider router={appRouter} />
+        {/* <Body/> */}
 
 
       

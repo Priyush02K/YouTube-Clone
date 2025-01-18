@@ -6,6 +6,7 @@ import  store  from './utils/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainCounter from './components/MainCounter';
 import WatchPage from './components/WatchPage';
+import ShortsPage from './components/ShortsPage';
 
 
 const appRouter =createBrowserRouter ([{
@@ -23,8 +24,12 @@ const appRouter =createBrowserRouter ([{
       element:<WatchPage/>
     },
 
+    {
+      path:"Short",
+      element:<ShortsPage/>
+    },
 
-
+    
 
   ]
 }])
